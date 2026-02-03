@@ -22,7 +22,7 @@ public class MissoesModel {
     private String nome;
     private String dificuldade;
 
-    // @OneToMany - Uma missão pode ser atribuida para vários ninjas.
+
     @OneToMany(mappedBy = "missoes")
     private List<NinjaModel> ninjas;
 
