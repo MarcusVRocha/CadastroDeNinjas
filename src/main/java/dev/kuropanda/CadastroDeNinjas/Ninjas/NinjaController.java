@@ -3,7 +3,7 @@ package dev.kuropanda.CadastroDeNinjas.Ninjas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/ninjas")
 public class NinjaController {
 
     @GetMapping("/boasvindas")
@@ -20,13 +20,13 @@ public class NinjaController {
     }
 
     // Mostrar todos os Ninjas (READ)
-    @GetMapping("/listaninja")
+    @GetMapping("/listar")
     public String listarNinja(){
         return "Lista geral dos Ninjas";
     }
 
     // Mostrar Ninja por ID (READ)
-    @GetMapping("/listaninjaid")
+    @GetMapping("/listarid")
     public String listarNinjaId(){
         return "Lista Ninja por ID";
     }
@@ -38,7 +38,7 @@ public class NinjaController {
     }
 
     // Deletar o Ninja (DELETE)
-    @DeleteMapping("/deletaid")
+    @DeleteMapping("/deletarid")
     public String deletarNinjaId(){
         return "Deletar Ninja por ID";
     }
